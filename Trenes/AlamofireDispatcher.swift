@@ -177,13 +177,14 @@ public class AlamofireDispatcher {
                         guard let data = data where data.length > 0 else {
                             // service requests that do not return data won't throw exceptions when "converting" (which should be a NOP) -nico
                             let o = try! T.convert(nil, serviceRequest)
+                            T.processResponseData?(serviceRequest, o)
                             return success(o)
                         }
                         
                         do {
                             
-                            //let s = NSString(data: data, encoding: NSUTF8StringEncoding)
-                            //NSLog("received: \(s)")
+                            let s = NSString(data: data, encoding: NSUTF8StringEncoding)
+                            NSLog("received: \(s)")
                             let jsonObject = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
                             let modelObject = try T.convert(jsonObject, serviceRequest)
                             T.processResponseData?(serviceRequest, modelObject)
