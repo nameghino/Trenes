@@ -34,14 +34,14 @@ public struct TrenesServiceRequest: ServiceRequest {
     
     public static func convert(JSONObject: AnyObject?, _ request: TrenesServiceRequest) throws -> TrenesServiceResponse {
         
-        guard let
-            path = NSBundle.mainBundle().pathForResource("MockResponse", ofType: "json"),
-            data = NSData(contentsOfFile: path) else { fatalError() }
-        
-        let o = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! JSONDictionary
-        
-        //        guard let r = TrenesServiceResponse(dict: JSONObject as! JSONDictionary, lineId: request.ramal) else {
-        guard let r = TrenesServiceResponse(dict: o, lineId: request.ramal) else {
+        //        guard let
+        //            path = NSBundle.mainBundle().pathForResource("MockResponse", ofType: "json"),
+        //            data = NSData(contentsOfFile: path) else { fatalError() }
+        //
+        //        let o = try! NSJSONSerialization.JSONObjectWithData(data, options: []) as! JSONDictionary
+        //        guard let r = TrenesServiceResponse(dict: o, lineId: request.ramal) else {
+        guard let r = TrenesServiceResponse(dict: JSONObject as! JSONDictionary, lineId: request.ramal) else {
+            
             throw AlamofireDispatcher.AlamofireDispatcherError.SerializerFailed
         }
         return r
@@ -92,12 +92,17 @@ private struct TimetableItemStorage {
     static var terminusTimestampParser: TimestampParser = {
         return {
             (trainTime: String) -> NSDate in
-            let df = NSDateFormatter()
-            df.dateFormat = "HH:mm"
-            guard let t = df.dateFromString(trainTime) else { fatalError() }
-            return t
+            
+            let stringComponents = trainTime.componentsSeparatedByString(":")
+            let components = NSDateComponents()
+            components.hour = Int(stringComponents.first!)!
+            components.minute = Int(stringComponents.last!)!
+
+            guard let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian) else { fatalError() }
+            let today = calendar.startOfDayForDate(NSDate())
+            return calendar.dateByAddingComponents(components, toDate: today, options: [])!
         }
-        }()
+    }()
     
     let _status: TrainStatus?
     let _timestamp: NSDate
@@ -122,11 +127,11 @@ private struct TimetableItemStorage {
     //    }
     
     static func create(dict: JSONDictionary) -> [TimetableItem] {
+        
+        
         if let
             serviceTypeString = dict["tipo_s"] as? String,
             serviceType = TrainServiceType.init(rawValue: serviceTypeString),
-            lineIdString = dict["ramal"] as? String,
-            lineId = Int(lineIdString),
             est = dict["est"],
             statusString = dict["estado"] as? String,
             status = TrainStatus(rawValue: statusString.lowercaseString),
@@ -134,6 +139,11 @@ private struct TimetableItemStorage {
             platform = Int(platformString),
             timestampString = dict["min"] as? String,
             timestamp = terminusTimestampParser(timestampString) {
+                let lineId: Int = {
+                    if let lid = dict["ramal"] as? Int { return lid }
+                    return Int(dict["ramal"] as! String) ?? -1
+                }()
+                
                 let item = TimetableItemStorage(
                     _status: status,
                     _timestamp: timestamp,
@@ -155,7 +165,7 @@ private struct TimetableItemStorage {
                     lineId = Int(lineIdString),
                     est = dict["est_\(i)"],
                     timestampString = dict["min_\(i)"] as? String,
-                    timestamp = terminusTimestampParser(timestampString),
+                    timestamp = intermediateTimestampParser(timestampString),
                     trainNumberString = dict["tren_\(i)"] as? String,
                     trainIdString = dict["chapa_\(i)"] as? String,
                     mysteryId = dict["_id"] {
@@ -196,13 +206,19 @@ extension TimetableItemStorage: TerminusTimetableItem {
 public struct TrenesServiceResponse {
     var lineId: Int
     let timestamp: NSDate
-    let sourceTerminusDepartures: [JSONDictionary]
-    let destinationTerminusDepartures: [JSONDictionary]
-    let intermediates: [JSONDictionary]
-    
-    var timetable: [JSONDictionary] { return [] }
-    
     let message: String?
+    
+//    var intermediates: [Int : IntermediateTimetableItem]
+    
+    private var timetable: [TimetableItem]
+    
+    func nextInboundForStationAtIndex(index: Int) -> TimetableItem {
+        return timetable.first!
+    }
+    
+    func nextOutboundForStationAtIndex(index: Int) -> TimetableItem {
+        return timetable.last!
+    }
     
     init?(dict: JSONDictionary, lineId: Int) {
         self.lineId = lineId
@@ -223,14 +239,17 @@ public struct TrenesServiceResponse {
         let stuff = [
             terminus1Info.flatMap(TimetableItemStorage.create),
             terminus2Info.flatMap(TimetableItemStorage.create),
-            intermediatesInfo.flatMap(TimetableItemStorage.create)].reduce([], combine: { return $0 + [$1] })
+            intermediatesInfo.flatMap(TimetableItemStorage.create)
+        ].reduce([], combine: { return $0 + [$1] })
         
-        NSLog("\(stuff)")
+        timetable = Array(stuff.flatten())
         
-        
-        sourceTerminusDepartures = []
-        destinationTerminusDepartures = []
-        intermediates = []
+        timetable.forEach {
+            item in
+            if let item = item as? IntermediateTimetableItem {
+                NSLog("\(item.mysteryId)")
+            }
+        }
         
         message = alerts["mensaje"] as? String
     }
