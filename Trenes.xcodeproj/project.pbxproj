@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B5C0CD311028E3A31A04F69 /* Pods_Trenes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A4F8581D711226759898413 /* Pods_Trenes.framework */; };
+		352D7CA01BD05E10001604AB /* Lineas.json in Resources */ = {isa = PBXBuildFile; fileRef = 352D7C9F1BD05E10001604AB /* Lineas.json */; settings = {ASSET_TAGS = (); }; };
+		352D7CA21BD06827001604AB /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352D7CA11BD06827001604AB /* StationListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		352D7CA41BD08F12001604AB /* MockResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 352D7CA31BD08F12001604AB /* MockResponse.json */; settings = {ASSET_TAGS = (); }; };
+		358B06781B8A3D2300643556 /* AlamofireDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B06771B8A3D2300643556 /* AlamofireDispatcher.swift */; };
+		358B067A1B8A3D9A00643556 /* TrenesServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B06791B8A3D9A00643556 /* TrenesServiceRequest.swift */; };
+		358B06801B8A89D800643556 /* TrainLineInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B067F1B8A89D800643556 /* TrainLineInformation.swift */; };
 		35DCD4031B8A371600CBA006 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCD4021B8A371600CBA006 /* AppDelegate.swift */; };
 		35DCD4051B8A371600CBA006 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DCD4041B8A371600CBA006 /* ViewController.swift */; };
 		35DCD4081B8A371600CBA006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35DCD4061B8A371600CBA006 /* Main.storyboard */; };
@@ -26,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		352D7C9F1BD05E10001604AB /* Lineas.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Lineas.json; sourceTree = "<group>"; };
+		352D7CA11BD06827001604AB /* StationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		352D7CA31BD08F12001604AB /* MockResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MockResponse.json; sourceTree = "<group>"; };
+		358B06771B8A3D2300643556 /* AlamofireDispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireDispatcher.swift; sourceTree = "<group>"; };
+		358B06791B8A3D9A00643556 /* TrenesServiceRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrenesServiceRequest.swift; sourceTree = "<group>"; };
+		358B067F1B8A89D800643556 /* TrainLineInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainLineInformation.swift; sourceTree = "<group>"; };
 		35DCD3FF1B8A371600CBA006 /* Trenes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Trenes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DCD4021B8A371600CBA006 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35DCD4041B8A371600CBA006 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +49,9 @@
 		35DCD4131B8A371700CBA006 /* TrenesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrenesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DCD4171B8A371700CBA006 /* TrenesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrenesTests.swift; sourceTree = "<group>"; };
 		35DCD4191B8A371700CBA006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F882EFB3927DFB9CE4E67F8 /* Pods-Trenes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trenes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trenes/Pods-Trenes.release.xcconfig"; sourceTree = "<group>"; };
+		5A4F8581D711226759898413 /* Pods_Trenes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trenes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4C4E681E5B63469DC55DD11 /* Pods-Trenes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trenes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trenes/Pods-Trenes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B5C0CD311028E3A31A04F69 /* Pods_Trenes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +73,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3473D2CCE0177063ADD3EBD2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4C4E681E5B63469DC55DD11 /* Pods-Trenes.debug.xcconfig */,
+				3F882EFB3927DFB9CE4E67F8 /* Pods-Trenes.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		358B06761B8A3CC000643556 /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				358B06771B8A3D2300643556 /* AlamofireDispatcher.swift */,
+			);
+			name = Dispatcher;
+			sourceTree = "<group>";
+		};
 		35DCD3F61B8A371600CBA006 = {
 			isa = PBXGroup;
 			children = (
 				35DCD4011B8A371600CBA006 /* Trenes */,
 				35DCD4161B8A371700CBA006 /* TrenesTests */,
 				35DCD4001B8A371600CBA006 /* Products */,
+				3473D2CCE0177063ADD3EBD2 /* Pods */,
+				6E3424C9227E8B57FBFBB33A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +113,18 @@
 		35DCD4011B8A371600CBA006 /* Trenes */ = {
 			isa = PBXGroup;
 			children = (
+				358B06761B8A3CC000643556 /* Dispatcher */,
 				35DCD4021B8A371600CBA006 /* AppDelegate.swift */,
 				35DCD4041B8A371600CBA006 /* ViewController.swift */,
 				35DCD4061B8A371600CBA006 /* Main.storyboard */,
 				35DCD4091B8A371600CBA006 /* Assets.xcassets */,
 				35DCD40B1B8A371600CBA006 /* LaunchScreen.storyboard */,
 				35DCD40E1B8A371600CBA006 /* Info.plist */,
+				358B06791B8A3D9A00643556 /* TrenesServiceRequest.swift */,
+				352D7C9F1BD05E10001604AB /* Lineas.json */,
+				358B067F1B8A89D800643556 /* TrainLineInformation.swift */,
+				352D7CA11BD06827001604AB /* StationListViewController.swift */,
+				352D7CA31BD08F12001604AB /* MockResponse.json */,
 			);
 			path = Trenes;
 			sourceTree = "<group>";
@@ -96,6 +138,14 @@
 			path = TrenesTests;
 			sourceTree = "<group>";
 		};
+		6E3424C9227E8B57FBFBB33A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A4F8581D711226759898413 /* Pods_Trenes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +153,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35DCD41C1B8A371700CBA006 /* Build configuration list for PBXNativeTarget "Trenes" */;
 			buildPhases = (
+				3E03FB0245639CE51913319F /* Check Pods Manifest.lock */,
 				35DCD3FB1B8A371600CBA006 /* Sources */,
 				35DCD3FC1B8A371600CBA006 /* Frameworks */,
 				35DCD3FD1B8A371600CBA006 /* Resources */,
+				35DCD4221B8A378B00CBA006 /* ShellScript */,
+				033243A6F5E25A9CE612D3E9 /* Embed Pods Frameworks */,
+				F868FA5D30D1804AD4A79332 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,8 +231,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				35DCD40D1B8A371600CBA006 /* LaunchScreen.storyboard in Resources */,
+				352D7CA41BD08F12001604AB /* MockResponse.json in Resources */,
 				35DCD40A1B8A371600CBA006 /* Assets.xcassets in Resources */,
 				35DCD4081B8A371600CBA006 /* Main.storyboard in Resources */,
+				352D7CA01BD05E10001604AB /* Lineas.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,13 +247,78 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033243A6F5E25A9CE612D3E9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trenes/Pods-Trenes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35DCD4221B8A378B00CBA006 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 0e4168bc7ed24d5f54bf2bdc46915258920bc284 daa8c55fb0d2f0b23028a45817eee3626c8b25c572fce7f67541f30c15a3b645";
+		};
+		3E03FB0245639CE51913319F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F868FA5D30D1804AD4A79332 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Trenes/Pods-Trenes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35DCD3FB1B8A371600CBA006 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				358B067A1B8A3D9A00643556 /* TrenesServiceRequest.swift in Sources */,
 				35DCD4051B8A371600CBA006 /* ViewController.swift in Sources */,
 				35DCD4031B8A371600CBA006 /* AppDelegate.swift in Sources */,
+				358B06781B8A3D2300643556 /* AlamofireDispatcher.swift in Sources */,
+				358B06801B8A89D800643556 /* TrainLineInformation.swift in Sources */,
+				352D7CA21BD06827001604AB /* StationListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,22 +443,27 @@
 		};
 		35DCD41D1B8A371700CBA006 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4C4E681E5B63469DC55DD11 /* Pods-Trenes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = Trenes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.nameghino.tests.Trenes;
+				PRODUCT_BUNDLE_IDENTIFIER = org.nameghino.Trenes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		35DCD41E1B8A371700CBA006 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F882EFB3927DFB9CE4E67F8 /* Pods-Trenes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Trenes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.nameghino.tests.Trenes;
+				PRODUCT_BUNDLE_IDENTIFIER = org.nameghino.Trenes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -385,6 +511,7 @@
 				35DCD41E1B8A371700CBA006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35DCD41F1B8A371700CBA006 /* Build configuration list for PBXNativeTarget "TrenesTests" */ = {
 			isa = XCConfigurationList;
@@ -393,6 +520,7 @@
 				35DCD4211B8A371700CBA006 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

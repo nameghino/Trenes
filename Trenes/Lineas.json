@@ -1,0 +1,265 @@
+{
+    "Lineas": [
+               {
+               "Nombre": "Sarmiento",
+               "Prefijo": "Línea",
+               "Ramales": [
+                           {
+                           "RamalIda": 1,
+                           "RamalVuelta": 2,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Once",
+                                          "Caballito",
+                                          "Flores",
+                                          "Floresta",
+                                          "Villa Luro",
+                                          "Liniers",
+                                          "Ciudadela",
+                                          "Ramos Mejia",
+                                          "Haedo",
+                                          "Moron",
+                                          "Castelar",
+                                          "Ituzaingo",
+                                          "S.A. de Padua",
+                                          "Merlo",
+                                          "Paso del Rey",
+                                          "Moreno"
+                                          ]
+                           },
+                           {
+                           "RamalIda": 51,
+                           "RamalVuelta": 52,
+                           "Mostrar": false,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Moreno",
+                                          "La Reja",
+                                          "F. Alvarez",
+                                          "P. Marin",
+                                          "Las Malvinas",
+                                          "Gral Rodriguez",
+                                          "La Fraternidad",
+                                          "Lezica y Torrezuri",
+                                          "Univ. Lujan",
+                                          "Lujan",
+                                          "Jauregui",
+                                          "Olivera",
+                                          "Gowland",
+                                          "Mercedes"
+                                          ]
+                           },
+                           {
+                           "RamalIda": 53,
+                           "RamalVuelta": 54,
+                           "Mostrar": false,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Merlo",
+                                          "Km 34",
+                                          "Ferrari",
+                                          "Mariano Acosta",
+                                          "Marcos Paz",
+                                          "Zamudio",
+                                          "Hornos",
+                                          "Las Heras",
+                                          "Sperati",
+                                          "Zapiola",
+                                          "Empalme Lobos",
+                                          "Lobos"
+                                          ]
+                           }
+                           ]
+               },
+               {
+               "Nombre": "Mitre",
+               "Prefijo": "Línea",
+               "Ramales": [
+                           {
+                           "RamalIda": 5,
+                           "RamalVuelta": 6,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Retiro",
+                                          "L. de la Torre",
+                                          "Belgrano C",
+                                          "Nuñez",
+                                          "Rivadavia",
+                                          "Vicente López",
+                                          "Olivos",
+                                          "La Lucila",
+                                          "Martínez",
+                                          "Acassuso",
+                                          "San Isidro C",
+                                          "Béccar",
+                                          "Victoria",
+                                          "Virreyes",
+                                          "San Fernando C",
+                                          "Carupá",
+                                          "Tigre"
+                                          ]
+                           },
+                           {
+                           "RamalIda": 7,
+                           "RamalVuelta": 8,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Retiro",
+                                          "3 de Febrero",
+                                          "Ministro Carranza",
+                                          "Colegiales",
+                                          "Belgrano R",
+                                          "Coghlan",
+                                          "Saavedra",
+                                          "Juan B. Justo",
+                                          "Florida",
+                                          "Dr. Cetrángolo",
+                                          "Mitre"
+                                          ]
+                           },
+                           {
+                           "RamalIda": 9,
+                           "RamalVuelta": 10,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Retiro",
+                                          "3 de Febrero",
+                                          "Ministro Carranza",
+                                          "Colegiales",
+                                          "Belgrano R",
+                                          "L. M. Drago ",
+                                          "General Urquiza",
+                                          "Pueyrredon",
+                                          "Miguelete",
+                                          "San Martin",
+                                          "San Andres",
+                                          "Malaver",
+                                          "Villa Ballester",
+                                          "Chilavert",
+                                          "J. L. Suarez"
+                                          ]
+                           }
+                           ]
+               },
+               {
+               "Nombre": "Roca",
+               "Prefijo": "Línea",
+               "Ramales": [
+                           {
+                           "RamalIda": 11,
+                           "RamalVuelta": 12,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Constitución",
+                                          "Avellaneda",
+                                          "Sarandí",
+                                          "Villa Domínico",
+                                          "Wilde",
+                                          "Don Bosco",
+                                          "Bernal",
+                                          "Quilmes",
+                                          "Ezpeleta",
+                                          "Berazategui",
+                                          "Plátanos",
+                                          "Hudson",
+                                          "Pereyra",
+                                          "Villa Elisa",
+                                          "City Bell",
+                                          "Gonnet",
+                                          "Ringuelet",
+                                          "Tolosa",
+                                          "La Plata"
+                                          ]
+                           },
+                           {
+                           "RamalIda": 13,
+                           "RamalVuelta": 14,
+                           "Mostrar": false,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Constitución",
+                                          "Avellaneda",
+                                          "Sarandí",
+                                          "Villa Domínico",
+                                          "Wilde",
+                                          "Don Bosco",
+                                          "Bernal",
+                                          "Quilmes",
+                                          "Ezpeleta",
+                                          "Berazategui",
+                                          "Villa España",
+                                          "Ranelagh",
+                                          "Sourigues",
+                                          "Bosques"
+                                          ]
+                           }
+                           ]
+               },
+               {
+               "Nombre": "San Martín",
+               "Prefijo": "Línea",
+               "Ramales": [
+                           {
+                           "RamalIda": 31,
+                           "RamalVuelta": 32,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Retiro",
+                                          "Palermo",
+                                          "Chacarita",
+                                          "La Paternal",
+                                          "Villa del Parque",
+                                          "Devoto",
+                                          "Sáenz Peña",
+                                          "Santos Lugares",
+                                          "Caseros",
+                                          "El Palomar",
+                                          "Hurlingham",
+                                          "W.C. Morris",
+                                          "Bella Vista",
+                                          "Muñiz",
+                                          "San Miguel",
+                                          "José C. Paz",
+                                          "Sol y Verde",
+                                          "Pte. Derqui",
+                                          "Villa Astolfi",
+                                          "Pilar",
+                                          "Manzanares",
+                                          "Cabred"
+                                          ]
+                           }
+                           ]
+               },
+               {
+               "Nombre": "Tren de la Costa",
+               "Prefijo": "",
+               "Ramales": [
+                           {
+                           "RamalIda": 41,
+                           "RamalVuelta": 42,
+                           "Mostrar": true,
+                           "Mapa": true,
+                           "Estaciones": [
+                                          "Maipú",
+                                          "Borges",
+                                          "Libertador",
+                                          "Juan Anchorena",
+                                          "Las Barrancas",
+                                          "San Isidro R",
+                                          "Punta Chica",
+                                          "Marina Nueva",
+                                          "San Fernando R",
+                                          "Canal San Fernando",
+                                          "Delta"
+                                          ]
+                           }
+                           ]
+               }
+               ]
+}
